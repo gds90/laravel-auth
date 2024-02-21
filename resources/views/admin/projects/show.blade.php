@@ -7,6 +7,10 @@
                 <h2>{{ $project->title }}</h2>
                 <p>{{ $project->description }}</p>
                 <p>Link: {{ $project->link }}</p>
+                <div class="text-center">
+                    <a href="{{ route('admin.projects.index') }}" class="btn btn-sm btn-danger">Torna
+                        all'elenco completo</a>
+                </div>
             </div>
         </div>
     </div>
