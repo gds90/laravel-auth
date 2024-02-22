@@ -8,7 +8,7 @@
                 <p>{{ $project->description }}</p>
                 <p>Link: {{ $project->link }}</p>
                 <div class="text-center">
-                    <a href="{{ route('admin.projects.index') }}" class="btn btn-sm btn-danger">Torna
+                    <a href="{{ route('admin.projects.index') }}" class="btn btn-sm btn-outline-danger">Torna
                         all'elenco completo</a>
                 </div>
             </div>

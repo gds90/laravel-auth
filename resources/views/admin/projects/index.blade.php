@@ -24,7 +24,7 @@
                                 <td>{{ $project->link }}</td>
                                 <td>{{ $project->slug }}</td>
                                 <td><a href="{{ route('admin.projects.show', ['project' => $project->slug]) }}"
-                                        class="btn btn-sm btn-success">Info</a></td>
+                                        class="btn btn-sm btn-outline-secondary">Info</a></td>
                             </tr>
                         @endforeach
                     </tbody>
