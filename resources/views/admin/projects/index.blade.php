@@ -40,18 +40,20 @@
                                             class="btn btn-sm btn-outline-warning ms-1">
                                             <i class="fa-solid fa-edit"></i>
                                         </a>
-                                        <form action="{{ route('admin.projects.destroy', ['project' => $project->slug]) }}"
+                                        {{-- <form action="{{ route('admin.projects.destroy', ['project' => $project->slug]) }}"
                                             method="POST" class="ms-1"
                                             onsubmit="return confirm('Sei sicuro di voler eliminare questo progetto?')">
                                             @csrf
                                             @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-danger"><i
+                                            <button type="submit" class="btn btn-sm btn-danger" ><i
                                                     class="fa-solid fa-trash"></i></button>
-                                        </form>
-                                        {{-- <a href="{{ route('admin.projects.destroy', ['project' => $project->id]) }}"
-                                            class="btn btn-sm btn-outline-danger ms-1">
+                                        </form> --}}
+                                        <a href="{{ route('admin.projects.destroy', ['project' => $project->id]) }}"
+                                            class="btn btn-sm btn-outline-danger ms-1" data-bs-toggle="modal"
+                                            data-bs-target="#modal_post_delete-{{ $project->slug }}">
                                             <i class="fa-solid fa-trash"></i>
-                                        </a> --}}
+                                        </a>
+                                        @include('admin.projects.partials.modal_delete')
                                     </div>
                                 </td>
                             </tr>
