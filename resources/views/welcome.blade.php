@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="jumbotron p-5 mb-4 bg-light rounded-3">
-        <div class="container py-5 bg">
+        <div class="container py-5">
             <div class="logo_laravel">
                 <img src="./img/logo1.png" alt="My Projects" class="">
             </div>
@@ -16,11 +16,37 @@
         </div>
     </div>
 
-    <div class="content">
-        <div class="container">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora temporibus, dicta nemo aliquam totam nisi
-                deserunt soluta quas voluptatum ab beatae praesentium necessitatibus minus, facilis illum rerum officiis
-                accusamus dolores!</p>
+    <div class="content rounded-3 bg-light ">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-8">
+                    <img src="/img/team.jpg" alt="Team" class="w-100 rounded-3">
+                </div>
+                <div class="col-4 pt-5">
+                    <h2 class="text-danger">Massimizza l'Efficienza del Tuo Team con il Nuovo Gestionale per Progetti
+                        Informatici</h2>
+                    <p class="fs-5">Ottimizza la pianificazione, la collaborazione e il monitoraggio dei progetti
+                        informatici con il
+                        nostro innovativo software gestionale. Con funzionalità intuitive e strumenti avanzati, potrai
+                        gestire risorse, tenere traccia dei progressi e garantire la tempestiva consegna dei progetti, il
+                        tutto con un'unica piattaforma integrata.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-4 pt-5">
+                    <h2 class="text-danger">Trasforma la Tua Visione in Realizzazione con il Nostro Gestionale per Progetti
+                        Informatici
+                        Informatici</h2>
+                    <p class="fs-5">Dall'ideazione alla consegna, il nostro gestionale per progetti informatici ti offre
+                        il supporto necessario per trasformare le tue idee in successi tangibili. Grazie a strumenti
+                        sofisticati di gestione delle attività e di collaborazione, potrai coordinare il lavoro del tuo team
+                        in modo efficiente, garantendo risultati impeccabili in ogni fase del ciclo di vita del progetto.
+                    </p>
+                </div>
+                <div class="col-8">
+                    <img src="/img/developer.jpg" alt="Developer" class="w-100 rounded-3">
+                </div>
+            </div>
         </div>
     </div>
 @endsection
