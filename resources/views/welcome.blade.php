@@ -20,11 +20,12 @@
         <div class="container py-4">
             <div class="row">
                 <div class="col-8">
-                    <img src="/img/team.jpg" alt="Team" class="w-100 rounded-3">
+                    <img src="/img/team.jpg" alt="Team" class="w-100 rounded-3 shadow ">
                 </div>
                 <div class="col-4 pt-5">
-                    <h2 class="text-danger">Massimizza l'Efficienza del Tuo Team con il Nuovo Gestionale per Progetti
-                        Informatici</h2>
+                    <h2 class="text-danger"><strong>Massimizza l'efficienza del tuo team con il nuovo gestionale per
+                            progetti
+                            informatici</h2></strong>
                     <p class="fs-5">Ottimizza la pianificazione, la collaborazione e il monitoraggio dei progetti
                         informatici con il
                         nostro innovativo software gestionale. Con funzionalità intuitive e strumenti avanzati, potrai
@@ -34,9 +35,9 @@
             </div>
             <div class="row mt-5">
                 <div class="col-4 pt-5">
-                    <h2 class="text-danger">Trasforma la Tua Visione in Realizzazione con il Nostro Gestionale per Progetti
-                        Informatici
-                        Informatici</h2>
+                    <h2 class="text-danger"><strong>Trasforma la tua visione in realizzazione con il nostro gestionale per
+                            progetti
+                            informatici</h2></strong>
                     <p class="fs-5">Dall'ideazione alla consegna, il nostro gestionale per progetti informatici ti offre
                         il supporto necessario per trasformare le tue idee in successi tangibili. Grazie a strumenti
                         sofisticati di gestione delle attività e di collaborazione, potrai coordinare il lavoro del tuo team
@@ -44,7 +45,7 @@
                     </p>
                 </div>
                 <div class="col-8">
-                    <img src="/img/developer.jpg" alt="Developer" class="w-100 rounded-3">
+                    <img src="/img/developer.jpg" alt="Developer" class="w-100 rounded-3 shadow">
                 </div>
             </div>
         </div>
