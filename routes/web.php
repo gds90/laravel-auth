@@ -21,9 +21,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::middleware(['auth', 'verified'])->name('admin.')->prefix('admin')->group(function () {
+    // ROTTA DASHBOARD CONTROLLER
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+    // ROTTA PROJECT CONTROLLER
     Route::resource('projects', ProjectController::class)->parameters(['projects' => 'project:slug']);
 });
 
