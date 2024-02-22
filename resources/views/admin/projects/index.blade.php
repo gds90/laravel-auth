@@ -36,7 +36,7 @@
                                             class="btn btn-sm btn-outline-secondary">
                                             <i class="fa-solid fa-magnifying-glass"></i>
                                         </a>
-                                        <a href="{{ route('admin.projects.edit', ['project' => $project->id]) }}"
+                                        <a href="{{ route('admin.projects.edit', ['project' => $project->slug]) }}"
                                             class="btn btn-sm btn-outline-warning ms-1">
                                             <i class="fa-solid fa-edit"></i>
                                         </a>
