@@ -4,8 +4,8 @@
     <div class="container">
         <div class="row">
             <div class="col-8 m-auto my-5">
-                <h2>{{ $project->title }}</h2>
-                <p>{{ $project->description }}</p>
+                <h2>Titolo: {{ $project->title }}</h2>
+                <p>Descrizione: {{ $project->description }}</p>
                 <p>Link: {{ $project->link }}</p>
                 <div class="text-center">
                     <a href="{{ route('admin.projects.index') }}" class="btn btn-sm btn-outline-danger">Torna

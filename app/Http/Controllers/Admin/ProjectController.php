@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Project;
+use Illuminate\Support\Str;
 
 use App\Http\Controllers\Controller;
 
@@ -17,7 +18,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::all();
+        $projects = Project::orderBy('id', 'desc')->get();
         return view('admin.projects.index', compact('projects'));
     }
 
@@ -28,7 +29,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.projects.create');
     }
 
     /**
@@ -39,7 +40,24 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
-        //
+        // recupero i dati inviati dalla form
+        $form_data = $request->all();
+
+        // creo una nuova istanza del model Project
+        $project = new Project();
+
+        // creo lo slug del progetto
+        $slug = Str::slug($form_data['title'], '-');
+        $form_data['slug'] = $slug;
+
+        // riempio gli altri campi con la funzione fill()
+        $project->fill($form_data);
+
+        // salvo il record sul db
+        $project->save();
+
+        // effettuo il redirect alla view index
+        return redirect()->route('admin.projects.index');
     }
 
     /**

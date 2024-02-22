@@ -1,10 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <table class="table table-striped border border-2 my-3 shadow rounded">
+                <div class="d-flex justify-content-between align-items-center ">
+                    <h2 class="text-uppercase text-danger ">Lista progetti:</h2>
+                    <a href="{{ route('admin.projects.create') }}" class="btn btn-sm btn-success">
+                        <i class="fa-solid fa-plus me-2"></i>Aggiungi nuovo progetto
+                    </a>
+                </div>
+                <table class="table table-striped border border-2 my-3 shadow">
                     <thead>
                         <tr>
                             <th>#</th>
