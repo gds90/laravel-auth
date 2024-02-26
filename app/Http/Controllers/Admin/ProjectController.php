@@ -6,6 +6,7 @@ use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Project;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 use App\Http\Controllers\Controller;
 
@@ -42,6 +43,13 @@ class ProjectController extends Controller
     {
         // recupero i dati inviati dalla form
         $form_data = $request->all();
+
+        // verifico se la richiesta contiene il campo cover_image:
+        if ($request->hasFile('cover_image')) {
+            // eseguo l'upload del file e recupero il path
+            $path = Storage::disk('public')->put('projects_image', $form_data['cover_image']);
+            $form_data['cover_image'] = $path;
+        }
 
         // creo una nuova istanza del model Project
         $project = new Project();

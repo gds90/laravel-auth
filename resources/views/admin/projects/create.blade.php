@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12">
                 <h2 class="text-uppercase text-dark-emphasis ">Aggiungi nuovo progetto:</h2>
-                <form action="{{ route('admin.projects.store') }}" method="POST">
+                <form action="{{ route('admin.projects.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group my-2">
                         <label for="title" class="control-label m-1 text-danger ">Titolo</label>
@@ -13,6 +13,15 @@
                             id="title" placeholder="Titolo del progetto" value="{{ old('title') }}" required>
                         @error('title')
                             <div class="text-danger m-1">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="form-group my-2">
+                        <label for="cover_image" class="control-label m-1 text-danger">Immagine di copertina</label>
+                        <input type="file" name="cover_image" id="cover_image"
+                            class="form-control @error('cover_image') is-invalid @enderror"
+                            value="{{ old('cover_image') }}">
+                        @error('cover_image')
+                            <div class="text-danger">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group my-2">
