@@ -27,3 +27,9 @@ continuate con l'esercizio di ieri (stessa repo) facendo le crud rimanenti. Per 
 
 BONUS: create una modale con cui chiedere conferma della cancellazione. Scegliete uno dei due metodi per visti a lezione.
 Buon lavoro
+
+26.02.24:
+sercizio di oggi:
+Laravel Boolfolio - Cover Image
+nome repo: [laravel-auth]
+Ciao ragazzi, continuiamo a lavorare nella repo dei giorni scorsi e aggiungiamo un’immagine ai nostri progetti. Ricordiamoci di creare il symlink con l’apposito comando artisan e di aggiungere l’attributo enctype="multipart/form-data" ai form di creazione e di modifica!
