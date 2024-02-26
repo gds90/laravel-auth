@@ -17,8 +17,15 @@
                 <p>Descrizione: {{ $project->description }}</p>
                 <p>Link: {{ $project->link }}</p>
                 <div class="">
-                    <a href="{{ route('admin.projects.index') }}" class="btn btn-sm btn-outline-danger">Torna
+                    <a href="{{ route('admin.projects.index') }}" class="btn btn-sm btn-outline-success"><i
+                            class="fas fa-arrow-left me-2"></i>Torna
                         all'elenco completo</a>
+                    <a href="{{ route('admin.projects.destroy', ['project' => $project->id]) }}"
+                        class="btn btn-sm btn-outline-danger ms-1" data-bs-toggle="modal"
+                        data-bs-target="#modal_post_delete-{{ $project->slug }}">
+                        <i class="fa-solid fa-trash me-2"></i>Elimina questo progetto
+                    </a>
+                    @include('admin.projects.partials.modal_delete')
                 </div>
             </div>
         </div>
