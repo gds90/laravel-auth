@@ -94,11 +94,20 @@ class ProjectController extends Controller
         // recupero i dati inviati dalla form
         $form_data = $request->all();
 
-        // creo lo slug del progetto
-        $slug = Str::slug($form_data['title'], '-');
-        $form_data['slug'] = $slug;
+        // controllo che non esista un altro progetto con lo stesso titolo passato dal form di modifica
+        $exists = Project::where('title', 'LIKE', $form_data['title'])
+            ->where('id', '!=', $project->id)
+            ->get();
 
-        // salvo il record sul db
+        if (count($exists) > 0) {
+            $error_message = 'Hai inserito un titolo già presente in un altro articolo';
+            return redirect()->route('admin.projects.edit', compact('project', 'error_message'));
+        }
+
+        // creo lo slug del progetto
+        $form_data['slug'] = Str::slug($form_data['title'], '-');
+
+        // aggiorno il record sul db
         $project->update($form_data);
 
         // effettuo il redirect alla view index

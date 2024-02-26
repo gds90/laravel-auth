@@ -19,10 +19,10 @@
     <div class="content rounded-3 bg-light ">
         <div class="container py-4">
             <div class="row">
-                <div class="col-8">
+                <div class="col-lg-8 col-md-12">
                     <img src="/img/team.jpg" alt="Team" class="w-100 rounded-3 shadow ">
                 </div>
-                <div class="col-4 pt-5">
+                <div class="col-lg-4 col-md-12 pt-5">
                     <h2 class="text-danger"><strong>Massimizza l'efficienza del tuo team con il nuovo gestionale per
                             progetti
                             informatici</h2></strong>
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="row mt-5">
-                <div class="col-4 pt-5">
+                <div class="col-lg-4 col-md-12 pt-5">
                     <h2 class="text-danger"><strong>Trasforma la tua visione in realizzazione con il nostro gestionale per
                             progetti
                             informatici</h2></strong>
@@ -44,7 +44,7 @@
                         in modo efficiente, garantendo risultati impeccabili in ogni fase del ciclo di vita del progetto.
                     </p>
                 </div>
-                <div class="col-8">
+                <div class="col-lg-8 col-md-12">
                     <img src="/img/developer.jpg" alt="Developer" class="w-100 rounded-3 shadow">
                 </div>
             </div>
