@@ -9,6 +9,7 @@ use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
@@ -85,9 +86,14 @@ class ProjectController extends Controller
      * @param  \App\Models\Project  $project
      * @return \Illuminate\Http\Response
      */
-    public function edit(Project $project)
+    public function edit(Project $project, Request $request)
     {
-        return view('admin.projects.edit', compact('project'));
+        $error_message = '';
+        if (!empty($request->all())) {
+            $messages = $request->all();
+            $error_message = $messages['error_message'];
+        }
+        return view('admin.projects.edit', compact('project', 'error_message'));
     }
 
     /**
@@ -130,7 +136,7 @@ class ProjectController extends Controller
         $project->update($form_data);
 
         // effettuo il redirect alla view index
-        return redirect()->route('admin.projects.index');
+        return redirect()->route('admin.projects.index', compact('error_message'));
     }
 
     /**

@@ -14,6 +14,11 @@
                         <input type="text" class="form-control @error('title') is-invalid @enderror" name="title"
                             id="title" placeholder="Titolo del progetto" value="{{ old('title') ?? $project->title }}"
                             required>
+                        @if ($error_message != '')
+                            <div class="text-danger m-1 ">
+                                {{ $error_message }}
+                            </div>
+                        @endif
                         @error('title')
                             <div class="text-danger m-1">{{ $message }}</div>
                         @enderror
